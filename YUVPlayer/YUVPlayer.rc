@@ -1,0 +1,405 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\YUVPlayer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\YUVPlayer.ico"
+IDI_BOY                 ICON                    "res\\BOY.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 244, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About YUVPlayer"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,11,20,20
+    LTEXT           "YUVPlayer 1.4",IDC_STATIC,40,10,83,8,SS_NOPREFIX
+    LTEXT           "Copyleft (C) forever ",IDC_STATIC,40,25,86,8
+    DEFPUSHBUTTON   "OK",IDOK,187,7,50,14,WS_GROUP
+    LTEXT           "Maintained By yingming(yingmingfan@gmail.com)\r\n\r\nSpecial thanks to firstime(groce@163.com)",IDC_STATIC,11,42,224,24
+END
+
+IDD_YUVPLAYER_DIALOG DIALOGEX 0, 0, 360, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "YUVPlayer"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "打开文件",IDC_OPEN_FILE,312,6,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "播    放",IDC_PLAY,312,22,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "回    放",IDC_REPLAY,312,38,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "关闭图像",IDC_CLOSE_PIC,312,54,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "退    出",IDC_EXIT,312,70,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "单帧步进",IDC_FORWARD_ONE_STEP,263,6,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "多帧步进",IDC_FORWARD_MULTISTEP,263,22,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "单帧步退",IDC_BACKWARD_ONE_STEP,263,38,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "多帧步退",IDC_BACKWARD_MULTISTEP,263,54,42,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "图像复位",IDC_RESET_PIC,263,70,42,13,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FRAME_RATE,152,19,28,12,ES_CENTER | ES_AUTOHSCROLL
+    COMBOBOX        IDC_ZOOM,210,19,39,61,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_START_FRAME,152,42,28,12,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "两图对比",IDC_COMP_MODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,135,66,48,10
+    CONTROL         "多图浏览",IDC_VIEW_MODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,198,66,48,10
+    COMBOBOX        IDC_SAMPLE_FORMAT,56,19,58,50,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FRAME_SIZE,56,42,58,63,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "自定义图像尺寸",IDC_CUSTOM_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,66,72,10
+    GROUPBOX        "图像参数",IDC_STATIC,7,4,112,79
+    LTEXT           "采样格式",IDC_STATIC,13,21,33,8
+    LTEXT           "图像尺寸",IDC_STATIC,13,44,33,8
+    GROUPBOX        "播放控制",IDC_STATIC,126,4,129,79
+    LTEXT           "帧率",IDC_STATIC,132,21,17,8
+    LTEXT           "缩放",IDC_STATIC,190,21,17,8
+    LTEXT           "从第",IDC_STATIC,132,44,17,8
+    LTEXT           "帧开始播放",IDC_STATIC,184,44,41,8
+END
+
+IDD_IMAGE_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIFFPIC_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_CUSTOMSIZE_DIALOG DIALOGEX 0, 0, 198, 189
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "自定义尺寸"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_WIDTH,154,25,30,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHT,154,48,30,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRIORITY,154,72,30,12,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "List2",IDC_SIZE_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,13,23,89,122
+    PUSHBUTTON      "取消选择",IDC_NO_SELECT,64,160,39,13,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "删除选定",IDC_DELETE_ITEMS,13,160,39,13,0,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确  定",IDOK,130,145,49,13
+    PUSHBUTTON      "取  消",IDCANCEL,130,167,49,13
+    GROUPBOX        "自定义尺寸",IDC_STATIC,117,7,74,122
+    LTEXT           "宽  度",IDC_STATIC,124,27,24,8
+    LTEXT           "高  度",IDC_STATIC,124,51,24,8
+    CTEXT           "优先级",IDC_STATIC,124,74,24,8
+    GROUPBOX        "当前可用尺寸",IDC_STATIC,7,7,102,174
+    PUSHBUTTON      "清 除(c)",IDC_CLEAR_SIZE,130,105,49,13
+END
+
+IDD_MBINFO_DIALOG DIALOGEX 0, 0, 315, 335
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 9, "Arial", 0, 0, 0x1
+BEGIN
+    LTEXT           "宏块地址：\r\n宏块坐标：\r\n亮度顶点：\r\n色度顶点：\r\n宏块像素：",IDC_STATIC,6,5,41,40,NOT WS_GROUP
+    EDITTEXT        IDC_MB_INFO,52,5,101,40,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED | NOT WS_BORDER
+END
+
+IDD_JUMPFRAME_DIALOG DIALOGEX 0, 0, 134, 80
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "图像跳转"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FRAME_NUMBER,20,21,34,14,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "跳转帧号",IDC_STATIC,8,8,58,60
+    PUSHBUTTON      "退    出",IDCANCEL,83,54,42,14
+    PUSHBUTTON      "跳转当前",IDC_CURR_JUMP,83,11,42,14
+    PUSHBUTTON      "跳转全部",IDC_ALL_JUMP,83,29,42,14
+    PUSHBUTTON      "帧号复位",IDC_CLEAR,16,47,42,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,0,0
+ PRODUCTVERSION 1,4,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "YUVPlayer Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1.4.0.0"
+            VALUE "InternalName", "YUVPlayer"
+            VALUE "LegalCopyright", "版权所有 (C) 2009"
+            VALUE "OriginalFilename", "YUVPlayer.EXE"
+            VALUE "ProductName", "YUVPlayer 应用程序"
+            VALUE "ProductVersion", "1, 4, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_YUVPLAYER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 357
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_IMAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIFFPIC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_CUSTOMSIZE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_JUMPFRAME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_YUVPLAYER_DIALOG DLGINIT
+BEGIN
+    IDC_ZOOM, 0x403, 5, 0
+0x3220, 0x2535, "\000" 
+    IDC_ZOOM, 0x403, 5, 0
+0x3520, 0x2530, "\000" 
+    IDC_ZOOM, 0x403, 5, 0
+0x3031, 0x2530, "\000" 
+    IDC_ZOOM, 0x403, 5, 0
+0x3032, 0x2530, "\000" 
+    IDC_ZOOM, 0x403, 5, 0
+0x3034, 0x2530, "\000" 
+    IDC_SAMPLE_FORMAT, 0x403, 10, 0
+0x5559, 0x2056, 0x3a34, 0x3a30, 0x0030, 
+    IDC_SAMPLE_FORMAT, 0x403, 10, 0
+0x5559, 0x2056, 0x3a34, 0x3a32, 0x0030, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3731, 0x7836, 0x3431, 0x0034, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3233, 0x7830, 0x3432, 0x0030, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3533, 0x7832, 0x3432, 0x0030, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3533, 0x7832, 0x3832, 0x0038, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3436, 0x7830, 0x3834, 0x0030, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3037, 0x7834, 0x3834, 0x0030, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3037, 0x7834, 0x3735, 0x0036, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3237, 0x7830, 0x3735, 0x0036, 
+    IDC_FRAME_SIZE, 0x403, 8, 0
+0x3038, 0x7830, 0x3036, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MOUSE_MENU MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "宏块地址",                        ID_MENUITEM_MBINFO1
+        MENUITEM "宏块坐标",                        ID_MENUITEM_MBINFO2
+        MENUITEM "亮度顶点",                        ID_MENUITEM_MBINFO3
+        MENUITEM "色度顶点",                        ID_MENUITEM_MBINFO4
+        MENUITEM SEPARATOR
+        MENUITEM "跳到指定帧号...",                   ID_MENUITEM_JUMP
+        MENUITEM "跳到相同帧",                       ID_MENUITEM_GOSAMEFRAME
+        MENUITEM SEPARATOR
+        MENUITEM "显示 YUV 图像",                   ID_MENUITEM_YUV, CHECKED
+        MENUITEM "显示 Y   图像",                   ID_MENUITEM_Y
+        MENUITEM "显示 U   图像",                   ID_MENUITEM_U
+        MENUITEM "显示 V   图像",                   ID_MENUITEM_V
+        MENUITEM SEPARATOR
+        MENUITEM "显示二值化图像",                     ID_MENUITEM_BIN_MODE, CHECKED
+        MENUITEM "显示绝对值图像",                     ID_MENUITEM_ABS_MODE
+        MENUITEM SEPARATOR
+        MENUITEM "图像有差异时通知我",                   ID_MENUITEM_NOTICE
+        MENUITEM SEPARATOR
+        POPUP "图像旋转"
+        BEGIN
+            MENUITEM "顺时针90°",                      ID_MENUITEM_ROTATE_90
+            MENUITEM "逆时针90°",                      ID_MENUITEM_ROTATE_270
+        END
+        POPUP "图像镜像"
+        BEGIN
+            MENUITEM "水平镜像",                        ID_MENUITEM_MIRROR_HORI
+            MENUITEM "垂直镜像",                        ID_MENUITEM_MIRROR_VERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "显示宏块信息窗口",                    ID_MENUITEM_SHOWMBINFO, CHECKED
+        MENUITEM "图像窗口粘附",                      ID_MENUITEM_ATTACH, CHECKED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 YUVPlayer(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\YUVPlayer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
