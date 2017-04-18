@@ -269,6 +269,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\YUVPlayer\CFile64.cpp" />
     <ClCompile Include="..\..\YUVPlayer\ChildDlg.cpp" />
     <ClCompile Include="..\..\YUVPlayer\configure.cpp" />
     <ClCompile Include="..\..\YUVPlayer\CustomSizeDlg.cpp" />
@@ -291,6 +292,7 @@
     <ResourceCompile Include="..\..\YUVPlayer\YUVPlayer.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\YUVPlayer\CFile64.h" />
     <ClInclude Include="..\..\YUVPlayer\ChildDlg.h" />
     <ClInclude Include="..\..\YUVPlayer\configure.h" />
     <ClInclude Include="..\..\YUVPlayer\CustomSizeDlg.h" />

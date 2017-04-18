@@ -9,6 +9,7 @@
 
 #include "define.h"
 #include "ChildDlg.h"
+#include "CFile64.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CImageDlg dialog
@@ -35,7 +36,7 @@ public:
     CString	frameSize;
     CString	sampleFormat;
     CString zoomSize;
-    CFile	*pFile;
+    CFile64	*pFile;
 
     void	free_resource();
     void	button_down_left();

@@ -478,7 +478,7 @@ void CYUVPlayerDlg::OnDropFiles(HDROP hDropInfo)
 int32 CYUVPlayerDlg::creat_image_window(CString CurrFilePath)
 {
     int32	s32Ret;
-    CFile	*pCurrFile	= new CFile();
+    CFile64	*pCurrFile	= new CFile64();
 
 
 	if(!pCurrFile->Open(CurrFilePath, CFile::shareDenyWrite)) 
@@ -1599,7 +1599,7 @@ LRESULT CYUVPlayerDlg::adjust_image(WPARAM wParam, LPARAM lParam)
     int32	s32Ret;
 	CImageDlg	*pCurrImage		= pImage[wParam];
 	CImageDlg	*pNewImg		= new CImageDlg((CWnd *)this, (CWnd *)this);
-    CFile		*pCurrFile		= new CFile();
+    CFile64		*pCurrFile		= new CFile64();
 	
 	
 	if(!pCurrFile->Open(pCurrImage->pFile->GetFilePath(), CFile::shareDenyWrite)) 
