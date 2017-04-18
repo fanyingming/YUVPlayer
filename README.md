@@ -12,3 +12,7 @@ While no man continue developing form 2009 to 2015.
 
 Now, i will maintain this useful windows program and let more developer get benefits of it.
 
+
+### Compiling
+
+Visual Studio 2013 is supported.
